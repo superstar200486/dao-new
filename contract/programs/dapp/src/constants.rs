@@ -1,0 +1,13 @@
+// use anchor_lang::prelude::*;
+pub const IDENTIFIER: usize = 8;
+pub const FIELD_IDENTIFIER: usize = 4;
+pub const USERNAME_L: usize = 20;
+pub const PROPOSAL_TITLE_L: usize = 20;
+pub const PROPOSAL_DESC_L: usize = 50;
+pub const PUBKEY_L: usize = 32;
+pub const ENUM_L: usize = 1;
+pub const U64_L: usize = 8;
+pub const U16_L: usize = 2;
+pub const BOOL_L: usize = 1;
+pub const OPTION_L: usize = 1;
+pub const U8_L: usize = 1;

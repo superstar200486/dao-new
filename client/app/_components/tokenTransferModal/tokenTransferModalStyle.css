@@ -1,0 +1,18 @@
+.form {
+    @apply p-14 shadow-2xl w-6/12 bg-white relative top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+.title-field {
+    @apply w-full mb-4 rounded border-2 border-gray-700 text-xl p-2;
+}
+.desc-field {
+    @apply w-full mb-4 rounded border-2 border-gray-700 text-xl p-2;
+}
+.number-field {
+    @apply w-full mb-4 rounded border-2 border-gray-700 text-xl p-2;
+}
+.submit {
+    @apply w-full bg-blue-500 text-2xl p-2 rounded text-white tracking-wide hover:bg-blue-700;
+}
+.error {
+    @apply text-red-600 mb-4;
+}
