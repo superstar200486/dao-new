@@ -16,7 +16,7 @@ type SnackBarContextType = {
 
 const SnackBarContext = createContext<SnackBarContextType>({} as SnackBarContextType);
 
-export default ({ children }: { children: React.ReactNode }) => {
+const SnackBarProvder = ({ children }: { children: React.ReactNode }) => {
     const [snackBar, setSnackBar] = useState<SnackPropsType>({} as SnackPropsType);
     
     const closeSnack = () => {
@@ -39,6 +39,8 @@ export default ({ children }: { children: React.ReactNode }) => {
         </SnackBarContext.Provider>
     )
 }
+
+export default SnackBarProvder;
 
 export function useSnackBarContext() {
   return useContext(SnackBarContext);

@@ -42,7 +42,7 @@ const ViewProposals =  () => {
 
         if (res) {
             if (res) {
-                setProposals(prev => prev.map(p => p.id === proposal.id ? {...p, voted: true} : p))
+                setProposals(prev => prev.map(p => p.id === proposal.id ? {...p, voted: true, quorum: ++p.quorum} : p))
                 snackBar.callSnackBar("success", "voted successfully!");
             } else {
                 snackBar.callSnackBar("error", "there is an error. please check your connection.");

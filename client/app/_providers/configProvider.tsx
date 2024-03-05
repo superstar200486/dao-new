@@ -24,7 +24,7 @@ type ConfigContext = {
 
 const ConfigContext = createContext<ConfigContext | undefined>(undefined);
 
-export default ({ children }: { children: React.ReactNode }) => {
+const ConfigProvider = ({ children }: { children: React.ReactNode }) => {
   const wallet = useAnchorWallet();
   const program = useProgramContext();
   const [config, setConfig] = useState<Config | undefined>(undefined);
@@ -105,6 +105,8 @@ export default ({ children }: { children: React.ReactNode }) => {
     </ConfigContext.Provider>
   )
 }
+
+export default ConfigProvider;
 
 export function useConfigContext() {
   return useContext(ConfigContext);

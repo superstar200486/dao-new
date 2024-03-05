@@ -46,7 +46,7 @@ const RenderProposals = ({ownProposals, refresh} : {ownProposals: OwnProposals, 
                     proposals.map((p: Proposal, k: number) => (
                     <div className="flex flex-col border-2 mb-2" key={k}>
                         <h3 className="text-center text-2xl border-b-2 p-2">{p.title}</h3>
-                        <div className="text-xl p-2">{p.desc}</div>
+                        <div className="text-xl p-2 text-left">{p.desc}</div>
                         <div className="flex p-2">
                             <div className="w-full">
                                 created: {p.created_at}

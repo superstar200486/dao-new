@@ -15,7 +15,7 @@ import { Dapp } from "../_payload/dapp";
 
 export const ProgramContext = createContext<anchor.Program<Dapp> | undefined>(undefined);
 
-export default ({ children }: { children: React.ReactNode }) => {
+const ProgramProvider = ({ children }: { children: React.ReactNode }) => {
     const [program, setProgram] = useState<anchor.Program<Dapp>>();
     const { connection } = useConnection();
     let wallet = useAnchorWallet();
@@ -49,6 +49,8 @@ export default ({ children }: { children: React.ReactNode }) => {
         </ProgramContext.Provider>
     )
 }
+
+export default ProgramProvider;
 
 export function useProgramContext() {
     return useContext(ProgramContext);

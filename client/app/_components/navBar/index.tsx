@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import StatusMarker from "../statusMaker/statusMaker";
 
 const WalletMultiButton = dynamic(() => import('@solana/wallet-adapter-react-ui').then((mod) => mod.WalletMultiButton), {
     ssr: false
@@ -17,13 +18,13 @@ const SideBar: React.FC = () => {
     const router = useRouter();
     useEffect(() => {
         if (config?.admin) {
-            router.push("/admin/manage-proposals")
+            router.push("/admin/manage-proposals");
         } else if (config?.user) {
-            router.push("/member/profile")
+            router.push("/member/profile");
         } else if (config && wallet) {
-            router.push("/user/register")
+            router.push("/user/register");
         } else if (!config && wallet) {
-            router.push("/init")
+            router.push("/init");
         } else {
             router.push("/");
         }
@@ -65,7 +66,7 @@ const SideBar: React.FC = () => {
     return (
         <nav className="p-0 group w-full flex shadow-xl fixed bg-gray-600">
             <div className="w-1/5 p-4">
-                <div className="text-center"><span className="text-2xl border-2 border-red-600 bg-red-600 p-2 text-white rounded-full">disabled</span></div>
+                <div className="text-center"><StatusMarker /></div>
             </div>
             <div className="flex flex-row-reverse w-4/5">
                 <div className="text-center">

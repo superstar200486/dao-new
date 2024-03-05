@@ -1,7 +1,6 @@
 "use client"
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { Inter } from 'next/font/google';
 import "./globals.css";
 import { usePathname } from 'next/navigation'
 import WalletContextProvider from "./_providers/walletContextProvider";
@@ -11,7 +10,6 @@ import { WalletConnectWalletAdapter } from "@solana/wallet-adapter-wallets";
 import ConfigProvider from "./_providers/configProvider";
 import SnackBarProvider from "./_providers/snackBarProvider";
 
-const inter = Inter({ subsets: ["latin"] });
 
 // WalletConnectWalletAdapter
 export default function RootLayout({
