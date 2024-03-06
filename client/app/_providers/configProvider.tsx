@@ -16,7 +16,6 @@ import type { Config } from "../_types";
 import { useProgramContext } from "./programContextProvider";
 import { getStatus } from "../_utils";
 
-
 type ConfigContext = {
   config: Config | undefined,
   setConfig: Dispatch<SetStateAction<Config | undefined>>

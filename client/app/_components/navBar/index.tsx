@@ -7,7 +7,7 @@ import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import StatusMarker from "../statusMaker/statusMaker";
-
+    
 const WalletMultiButton = dynamic(() => import('@solana/wallet-adapter-react-ui').then((mod) => mod.WalletMultiButton), {
     ssr: false
 });

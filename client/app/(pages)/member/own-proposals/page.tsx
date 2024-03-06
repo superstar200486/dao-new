@@ -8,7 +8,6 @@ import { useConfigContext } from "@/app/_providers/configProvider"
 import { OwnProposals } from "@/app/_types"
 import { getOwnProcessedProposals } from "@/app/_utils"
 import ProposalModal from "@/app/_components/proposalModal"
-import { useSnackBarContext } from "@/app/_providers/snackBarProvider"
 import RenderProposals from "@/app/_components/renderOwnProposals"
 
 const OwnProposals =  () => {

@@ -60,8 +60,8 @@ const InitDao = () => {
     }
 
     return (
-        <div className="pt-16 min-h-screen form-container">
-            <form className="form" onSubmit={handleSubmit(submit)}>
+        <div className="pt-16 min-h-screen flex items-center justify-center">
+            <form className="p-14 shadow-2xl w-6/12 bg-white" onSubmit={handleSubmit(submit)}>
                 <h1 className="text-center text-3xl mb-4 text-gray-800 bold uppercase">init dao</h1>
                 <div className="flex gap-4">
                     <div className="w-full">
