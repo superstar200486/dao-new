@@ -72,7 +72,6 @@ impl Proposal {
     }
 
     pub fn check_expiry(&self) -> Result<()> {
-
         let current_timestamp = Clock::get()?.slot;
         
         require!(self.max_expiry >= current_timestamp, ErrorCode::Expired);
