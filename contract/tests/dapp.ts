@@ -35,7 +35,7 @@ describe("dapp", async () => {
     
     const tx = await program.methods
     .initialize(
-      new BN(100000000), new BN(1), new BN(100000000), new BN(10000), new BN(5), new BN(10), 
+      new BN(100000000), new BN(1), new BN(100000000), new BN(10000), new BN(5), new BN(10),
     )
     .accounts({
         initializer: initializer.publicKey,
@@ -71,7 +71,6 @@ describe("dapp", async () => {
     )
     .signers([])
     .rpc();
-    
   });
   it("Activated User!", async () => {
     const tx = await program.methods

@@ -18,7 +18,6 @@ const OwnProposals =  () => {
     const program = useProgramContext();
     const wallet = useAnchorWallet();
     const config = useConfigContext()?.config;
-    const snackBar = useSnackBarContext();
 
     useEffect(() => {
         if (config?.user?.status === "active") {

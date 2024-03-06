@@ -1,17 +1,10 @@
 "use client"
-import type { Metadata } from "next";
-import Link from 'next/link';
 import "./globals.css";
-import { usePathname } from 'next/navigation'
 import WalletContextProvider from "./_providers/walletContextProvider";
 import ProgramContextProvider from "./_providers/programContextProvider";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { WalletConnectWalletAdapter } from "@solana/wallet-adapter-wallets";
 import ConfigProvider from "./_providers/configProvider";
 import SnackBarProvider from "./_providers/snackBarProvider";
 
-
-// WalletConnectWalletAdapter
 export default function RootLayout({
   children,
 }: Readonly<{
